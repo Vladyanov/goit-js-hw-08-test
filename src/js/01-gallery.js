@@ -17,18 +17,8 @@ const galleryItemsAdd = () => {
   galleryContainer.innerHTML = galleryItemsCreate(galleryItems);
 };
 
-const handleClick = e => {
-  e.preventDefault();
-
-  let gallery = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
-  });
-};
-
-const modalCreate = () => {
-  galleryContainer.addEventListener('click', handleClick);
-};
-
 galleryItemsAdd();
-modalCreate();
+let gallery = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
